@@ -25,7 +25,7 @@ React | `docker-compose up react` | The app is available at https://localhost:30
 
 ### Create react app
 
-By default the app is created inside react/app folder. To change the name of the folder modify the `.env` file:
+By default, the app is created inside react/app folder. To change the name of the folder modify the `.env` file:
 
 ```
 # create-react-app
@@ -34,7 +34,7 @@ CREATE_REACT_APP_FOLDER_NAME=app
 
 ### React
 
-By default you app has to be inside react/app folder. To change the name of the folder modify the `.env` file:
+By default, your app has to be inside react/app folder. To change the name of the folder modify the `.env` file:
 
 ```
 # react
