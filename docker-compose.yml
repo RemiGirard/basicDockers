@@ -5,8 +5,6 @@ services:
     build: ./ubuntu
     volumes:
       - ./ubuntu/root:/root
-    ports:
-      - "80:80"
   create-react-app:
     image: node:15.5.1
     container_name: create-react-app

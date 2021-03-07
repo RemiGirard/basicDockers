@@ -17,7 +17,7 @@ Docker Compose:
 
 Server | Command | Access | Comment
 --- | --- | --- | ---
-Ubuntu Server | `docker-compose up ubuntu` | Access the container with`docker-compose exec ubuntu bash`
+Ubuntu Server | `docker-compose up ubuntu` | Access the container with`docker-compose exec ubuntu bash` | 
 Create react app | `docker-compose up create-react-app` | Generate a new react app inside react/app. | Use `docker-compose up react` to start it. It will then be available at https://localhost:3000
 React | `docker-compose up react` | It will be available at https://localhost:3000. | **Requirement** : create a new react app with `docker-compose up create-react-app` **or** copy your existing react app in react/app folder
 
