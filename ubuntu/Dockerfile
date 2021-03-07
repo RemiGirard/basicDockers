@@ -1,5 +1,8 @@
 FROM ubuntu:20.04
 
-WORKDIR /home/
+WORKDIR /root/
+
+# just to keep the container up:
+ENTRYPOINT ["tail", "-f", "/dev/null"]
 
 EXPOSE 80

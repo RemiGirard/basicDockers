@@ -1,11 +1,26 @@
-version: "3"
+version: "3.6"
 services:
   ubuntu:
     container_name: ubuntu
     build: ./ubuntu
     volumes:
-      - ./ubuntu/home:/home
+      - ./ubuntu/root:/root
     ports:
       - "80:80"
-    stdin_open: true
-    tty: true
+  create-react-app:
+    image: node:15.5.1
+    container_name: create-react-app
+    volumes:
+      - ./react/${CREATE_REACT_APP_FOLDER_NAME}:/var/www/${CREATE_REACT_APP_FOLDER_NAME}
+    working_dir: /var/www/
+    entrypoint: npx create-react-app ${CREATE_REACT_APP_FOLDER_NAME}
+  react:
+    container_name: react
+    build:
+      context: ./react
+      args:
+        - REACT_APP_FOLDER_NAME=${REACT_APP_FOLDER_NAME}
+    volumes:
+      - ./react/${REACT_APP_FOLDER_NAME}:/var/www/${REACT_APP_FOLDER_NAME}
+    ports:
+    - "3000:3000"
