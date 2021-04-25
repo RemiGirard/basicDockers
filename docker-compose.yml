@@ -20,5 +20,7 @@ services:
         - REACT_APP_FOLDER_NAME=${REACT_APP_FOLDER_NAME}
     volumes:
       - ./react/${REACT_APP_FOLDER_NAME}:/var/www/${REACT_APP_FOLDER_NAME}
+    environment:
+      - CHOKIDAR_USEPOLLING=true
     ports:
-    - "3000:3000"
+      - "3000:3000"
